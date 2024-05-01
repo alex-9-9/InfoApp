@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000e2;
+  color: #fafaf9;
+  font-family: "Sono", sans-serif;
+  padding: 40px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.message {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 600px;
+  margin-top: 24;
+}
+
+/*MAIN LAYOUT*/
+#root {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 40px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  background-color: red;
+  padding: 20px;
+  white-space: nowrap;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 48px;
+}
+
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
+
+section {
+  overflow: hidden, scroll;
+  padding-bottom: 40px;
+}
+
+/*ELEMENTS*/
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+h1 {
+  font-size: 42px;
+  text-transform: uppercase;
+  font-family: "Coiny", sans-serif;
+  line-height: 1;
+  margin-top: 6px;
+  margin-right: 20px;
+  white-space: nowrap;
+}
+
+.category {
+  margin-bottom: 16px;
+}
+
+.fact {
+  font-size: 20px;
+  line-height: 1.4;
+  background-color: black;
+  margin-bottom: 16px;
+  border-radius: 40px;
+  padding: 16px;
+  padding: 16px 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (max-width: 1200px) {
+  .fact {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+  }
+}
+
+.tag {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Coiny", sans-serif;
+  padding-top: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 100px;
+}
+
+.vote-btn {
+  margin-left: auto;
+  flex-shrink: 0;
+  display: flex;
+  gap: 8px;
+}
+
+.vote-btn button {
+  border: none;
+  background-color: rgb(19, 19, 19);
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: 100px;
+  color: inherit;
+  font-family: inherit;
+}
+
+.vote-btn button:hover {
+  background-color: rgb(71, 47, 255);
+}
+
+.vote-btn button:disabled {
+  background-color: rgb(69, 69, 71);
+}
+
+ul {
+  list-style: none;
+}
+
+.source:link,
+.source:visited {
+  color: #a8a29e;
+  text-decoration: none;
+  margin-left: 12px;
+  transition: 1s;
+}
+
+.source:hover,
+.source:active {
+  color: blue;
+}
+
+.btn {
+  border: none;
+  font-family: "Coiny", sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 17px;
+  padding: 16px 0 13px;
+  background-image: linear-gradient(135deg, red, yellow);
+  color: inherit;
+  cursor: pointer;
+  border-radius: 75px;
+  transition: 300ms;
+}
+
+.btn:hover {
+  transform: scale(110%) rotate(2deg);
+}
+
+.btn-large {
+  font-size: 20px;
+  padding: 20px 32px 17px;
+}
+
+.btn-all-cat {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.btn-category {
+  width: 100%;
+  background-image: none;
+  padding: 20px;
+}
+
+.fact-form {
+  background-color: rgb(7, 39, 98);
+  margin-bottom: 50px;
+  padding: 16px 40px;
+  text-align: center;
+  border: 40px;
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  border-radius: 16px;
+}
+
+.fact-form input,
+.fact-form select {
+  width: 220px;
+  background-color: rgb(3, 3, 0);
+  border: none;
+  border-radius: 100px;
+  padding: 16px;
+  font-size: 18px;
+  color: inherit;
+  font-family: inherit;
+}
+
+.fact-form input::placeholder {
+  color: rgb(255, 255, 255);
+}
+
+.fact-form input:first-child {
+  flex-grow: 1;
+}
+
+.fact-form span {
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 18px;
+}
+
+@media (max-width: 1000px) {
+  body {
+    padding: 32px 48px;
+  }
+
+  .fact-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .fact-form input,
+  .fact-form select {
+    width: auto;
+  }
+}
